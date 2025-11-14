@@ -1,0 +1,328 @@
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 4px;
+  }
+
+  section {
+    padding: 18px 6px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/* CSS احترافي لموقع تعليمي HTML حديث */
+:root {
+  --main-bg: #181c24;
+  --main-color: #fff;
+  --accent: #ff9800;
+  --header-bg: #23272f;
+  --section-bg: #22262e;
+  --card-bg: #23272f;
+  --border-radius: 18px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.12);
+  --font-main: 'Cairo', 'Tajawal', Arial, sans-serif;
+}
+body {
+  background: var(--main-bg);
+  color: var(--main-color);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+header {
+  background: var(--header-bg);
+  box-shadow: var(--shadow);
+  padding: 32px 0 16px 0;
+  text-align: center;
+  border-bottom: 2px solid var(--accent);
+}
+header h1 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+nav a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--accent);
+}
+main {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+  
+}
+section {
+  background: var(--section-bg);
+  margin-bottom: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+  transition: background 0.3s;
+}
+section:hover {
+  background: #1a1e26;
+}
+h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+ul, ol {
+  font-size: 1.1rem;
+  line-height: 2.1;
+}
+pre, code {
+  background: #11141a;
+  color: #ffeb3b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-family: 'Fira Mono', 'Cairo', monospace;
+  overflow-x: auto;
+}
+pre {
+  margin: 18px 0;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+footer {
+  background: var(--header-bg);
+  color: #bbb;
+  text-align: center;
+  padding: 24px 0 12px 0;
+  font-size: 1.1rem;
+  border-top: 2px solid var(--accent);
+  margin-top: 48px;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 0 4px;
+  }
+  section {
+    padding: 18px 6px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+}
+/* زر نسخ الكود */
+.copy-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.copy-btn:hover {
+  background: #ffb74d;
+}
+/* أزرار عامة */
+button, .btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.08s;
+}
+button:active, .btn:active { transform: translateY(1px); }
+
+/* Tips styles */
+.tips-list { display:flex; flex-direction:column; gap:12px; }
+.tip { background: #2a2e36; padding: 12px 14px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 1rem; border-right: 6px solid var(--accent); }
+.tip strong { display:inline-block; margin-bottom:4px; }
+.tip.warning { border-right-color: #ff5252; background: #3b2b2b; }
+.tip.info { border-right-color: #2196f3; background: #223247; }
+.tip.success { border-right-color: #4caf50; background: #213226; }
+
+/* Light mode (switchable) */
+body.light-mode { background: #ffffff; color: #222; }
+body.light-mode header, body.light-mode footer, body.light-mode section, body.light-mode .card { background: #f6f8fb; color: #222; }
+body.light-mode .comparison-table tr:nth-child(even) { background: #f4f6fa; }
+body.light-mode pre, body.light-mode code { background: #f3f6ff; color: #111; }
+
+/* Small devices tweaks */
+
+
+/* تأثيرات بسيطة */
+section {
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+pre, code {
+  direction: ltr;
+  text-align: left;
+}
+.card pre, .card code {
+  direction: ltr;
+  text-align: left;
+}
+.card {
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+
+/* Comparison Table Styles */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  direction: rtl;
+  background: #807a7a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+.comparison-table th {
+  background: var(--primary-color, #4e54c8);
+  color: #fff;
+  font-weight: 600;
+}
+.comparison-table tr:nth-child(even) {
+  background: #63636d;
+}
+.comparison-table code {
+  background: #343535;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.95em;
+  direction: ltr;
+}
+
+/* إشعار النسخ */
+.copy-alert {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+  z-index: 9999;
+}
+
+
+
+
+
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.comparison-table {
+  min-width: 600px; /* يمنع الجدول من الكسر */
+}
+
+
+/* غلاف خارجي للجدول */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* تحويل الجدول إلى كروت على الموبايل */
+@media (max-width: 600px) {
+
+  .comparison-table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* إخفاء رأس الجدول */
+  .comparison-table thead {
+    display: none;
+  }
+
+  /* كل ROW = كارت */
+  .comparison-table tr {
+    background: #2a2e36; /* لون نفس الثيم */
+    margin-bottom: 16px;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.20);
+    border-right: 5px solid var(--accent); /* نفس لون البرتقالي */
+  }
+
+  /* كل خلية */
+  .comparison-table td {
+    padding: 8px 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    font-size: 1rem;
+    color: #eee;
+  }
+
+  /* إزالة آخر خط */
+  .comparison-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* عنوان الخانة */
+  .comparison-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--accent);
+  }
+}
