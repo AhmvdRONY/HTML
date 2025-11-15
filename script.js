@@ -1,5 +1,3 @@
-// JS احترافي لتجربة مستخدم مبهرة
-// نسخ الكود بضغطة زر
 function addCopyButtons() {
   document.querySelectorAll('pre code').forEach((block) => {
     const btn = document.createElement('button');
@@ -14,12 +12,10 @@ function addCopyButtons() {
     block.parentNode.appendChild(btn);
   });
 }
-// تفعيل زر النسخ بعد تحميل الصفحة
 window.addEventListener('DOMContentLoaded', addCopyButtons);
-// سكرول ناعم عند التنقل
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     const href = link.getAttribute('href');
     if (href.startsWith('#')) {
       e.preventDefault();
@@ -27,21 +23,9 @@ navLinks.forEach(link => {
     }
   });
 });
-// وضع ليلي/نهاري (اختياري)
-const toggleThemeBtn = document.createElement('button');
-toggleThemeBtn.textContent = 'تغيير المظهر';
-toggleThemeBtn.className = 'copy-btn';
-toggleThemeBtn.style.position = 'fixed';
-toggleThemeBtn.style.left = '24px';
-toggleThemeBtn.style.bottom = '24px';
-toggleThemeBtn.style.zIndex = '999';
-toggleThemeBtn.onclick = () => {
-  document.body.classList.toggle('light-mode');
-  toggleThemeBtn.textContent = document.body.classList.contains('light-mode') ? 'الوضع الليلي' : 'الوضع النهاري';
-};
+
 document.body.appendChild(toggleThemeBtn);
 
-// إضافة إشعار صغير عند النسخ
 function showCopyAlert(msg = 'تم نسخ الكود!') {
   const el = document.createElement('div');
   el.className = 'copy-alert';
@@ -61,12 +45,8 @@ function showCopyAlert(msg = 'تم نسخ الكود!') {
   setTimeout(() => el.remove(), 1600);
 }
 
-// الوضع الداكن التلقائي بحسب إعدادات النظام
 function autoDarkMode() {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // موقعنا مظلم في الأساس — لا نحتاج لتعديل عند الوضع الداكن
-    // ولكن لو أردنا تطبيق نمط فاتح تلقائيًا عند تفعيل الإعداد:
-    // document.body.classList.remove('light-mode');
   }
 }
 window.addEventListener('DOMContentLoaded', autoDarkMode);
