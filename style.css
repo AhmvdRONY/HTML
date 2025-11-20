@@ -1,6 +1,6 @@
 :root {
   --main-bg: #181c24;
-  --main-color: #fff;
+  --main-color: #ffffff;
   --accent: #ff9800;
   --header-bg: #23272f;
   --section-bg: #22262e;
@@ -34,12 +34,11 @@ header h1 {
 }
 
 .logo {
-  width: 80px;        
-  height: 80px;
-  border-radius: 50%; 
-  object-fit: cover;  
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-
 
 nav ul {
   list-style: none;
@@ -51,7 +50,7 @@ nav ul {
 }
 
 nav a {
-  color:rgb(166, 215, 255);
+  color: rgb(166, 215, 255);
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.2s;
@@ -86,7 +85,7 @@ h2 {
   margin-bottom: 18px;
 }
 
-#dont-call {  
+#dont-call {
   color: white;
   font-size: 2rem;
   margin-bottom: 18px;
@@ -100,7 +99,6 @@ ol {
 
 strong {
   color: rgb(136, 167, 69);
-
 }
 
 pre,
